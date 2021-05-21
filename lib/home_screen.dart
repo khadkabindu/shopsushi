@@ -1,7 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:shopsushi/top_sushi_card.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  List<String> imagePath = [
+    "images/salmonsushi.jpg",
+    "images/caviarsushi.jpg",
+    "images/ricesushi.jpg",
+    "images/octopus.jpg",
+    "images/shrimp.jpg",
+    "images/temakii.jpg",
+    "images/inarizushi.jpg",
+  ];
+
+  List<String> categories = [
+    "Salmon",
+    "Caviar",
+    "Rice",
+    "Octopus",
+    "Shrimp",
+    "Temaki",
+    "Inarizushi"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -148,10 +167,11 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
@@ -166,20 +186,96 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                     borderRadius: BorderRadius.circular(20),
-
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: "Search your sushi",
-                      border: InputBorder.none,
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: Colors.grey[600],
-                      )
-                    ),
+                        hintText: "Search your sushi",
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.grey[600],
+                        )),
                   ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 35,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Categories",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Text(
+                    "See all",
+                    style: TextStyle(color: Colors.blueGrey[800]),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Expanded(
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: imagePath.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(imagePath[index]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                categories[index],
+                                style: TextStyle(
+                                    color: Colors.blueGrey[800],
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                        ],
+                      );
+                    }),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Top Sushi",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "See all",
+                    style: TextStyle(color: Colors.blueGrey[800]),
+                  )
+                ],
+              ),
+              SizedBox(height: 20,),
+              TopSushiCard(),
             ],
           ),
         ),
