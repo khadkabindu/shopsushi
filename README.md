@@ -1,16 +1,16 @@
 # shopsushi
 
-A new Flutter project.
+UI implementation of Sushi app.
 
-## Getting Started
+## Screens
+<img src="images/screen1.png" alt="screen image" width="250" height="400"> <img src="images/screen2.png" alt="screen image" width="250" height="400"> <img src="images/screen3.png" alt="screen image" width="250" height="400"> <img src="images/screen4.png" alt="screen image" width="250" height="400"> 
 
-This project is a starting point for a Flutter application.
+## Video 
 
-A few resources to get you started if this is your first Flutter project:
+ <div>
+   <div align="left">
+    <a href="https://www.youtube.com/embed/DBx6ShT5onI"><img src="https://img.youtube.com/vi/DBx6ShT5onI/hqdefault.jpg" alt=""></a>
+   </div>  
+ 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
