@@ -116,7 +116,10 @@ class TopSushiCard extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Color(containerColor[index]),
                       borderRadius: BorderRadius.circular(10)),
-                )
+                ),
+                SizedBox(
+                  width: 10,
+                ),
               ],
             );
           }),

@@ -66,62 +66,44 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              SizedBox(height: 10,),
               InkWell(
-                onTap: () {
+                onTap: (){
                   Navigator.pop(context);
                 },
                 child: Row(
                   children: [
-                    SizedBox(
-                      width: 20,
-                    ),
+                    SizedBox(width: 20,),
                     Icon(Icons.home),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Text("Home"),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
+              SizedBox(height: 20,),
               InkWell(
-                onTap: () {
+                onTap: (){
                   Navigator.pop(context);
                 },
                 child: Row(
                   children: [
-                    SizedBox(
-                      width: 20,
-                    ),
+                    SizedBox(width: 20,),
                     Icon(Icons.fastfood),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 10,),
                     Text("Orders"),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
+              SizedBox(height: 20,),
               InkWell(
-                onTap: () {
+                onTap: (){
                   Navigator.pop(context);
                 },
                 child: Row(
                   children: [
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Icon(Icons.favorite),
-                    SizedBox(
-                      width: 10,
-                    ),
+                    SizedBox(width: 20,),
+                    Icon(Icons.favorite_sharp),
+                    SizedBox(width: 10,),
                     Text("Favorites"),
                   ],
                 ),
@@ -151,23 +133,17 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 30),
                   ),
                   Text(
-                    "Hi Megha!",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
+                    "Hi, Megha!",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                "What is your\nfavorite sushi?",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                "What is your\nfavourite Sushi?",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 25,
@@ -175,13 +151,13 @@ class HomeScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  margin: EdgeInsets.only(bottom: 6),
+                  margin: EdgeInsets.only(bottom: 6.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey,
-                        offset: Offset(0.0, 1.0),
+                        offset: Offset(0.0, 1.0), //(x,y)
                         blurRadius: 3.0,
                       ),
                     ],
@@ -206,15 +182,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Categories",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                   ),
-                  Text(
-                    "See all",
-                    style: TextStyle(color: Colors.blueGrey[800]),
-                  )
+                  Text("See all", style: TextStyle(color: Colors.blueGrey[800]),)
                 ],
               ),
               SizedBox(
@@ -234,13 +204,11 @@ class HomeScreen extends StatelessWidget {
                                 height: 60,
                                 width: 50,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image: AssetImage(imagePath[index]),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
+                                    color: Colors.white,
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                        image: AssetImage(imagePath[index]),
+                                        fit: BoxFit.cover)),
                               ),
                               SizedBox(
                                 height: 5,
@@ -251,7 +219,7 @@ class HomeScreen extends StatelessWidget {
                                     color: Colors.blueGrey[800],
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
-                              )
+                              ),
                             ],
                           ),
                           SizedBox(
@@ -261,6 +229,9 @@ class HomeScreen extends StatelessWidget {
                       );
                     }),
               ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -268,14 +239,16 @@ class HomeScreen extends StatelessWidget {
                     "Top Sushi",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    "See all",
-                    style: TextStyle(color: Colors.blueGrey[800]),
-                  )
+                  Text("See all", style: TextStyle(color: Colors.blueGrey[800]),)
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               TopSushiCard(),
+              SizedBox(
+                height: 20,
+              )
             ],
           ),
         ),
